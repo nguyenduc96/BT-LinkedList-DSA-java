@@ -18,7 +18,19 @@ public class MyLinkedList {
         }
     }
 
+    public MyLinkedList(int value) {
+        this.head = new Node(value);
+    }
+
     public MyLinkedList() {
+    }
+
+    public Node getHead() {
+        return head;
+    }
+
+    public void setHead(Node head) {
+        this.head = head;
     }
 
     public int getNumNodes() {
@@ -33,7 +45,7 @@ public class MyLinkedList {
         }
         Node nodeTemp = temp.next;
         temp.next = newNode;
-        newNode.next = temp;
+        newNode.next = nodeTemp;
     }
 
     public void addFirst(int value) {
